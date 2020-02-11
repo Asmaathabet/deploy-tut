@@ -6,8 +6,8 @@ const mimeTypes = {
   js: "text/js"
 };
 module.exports = (req, res) => {
-  const ext = url.split(".")[1];
-  const splitUrl = url.split("/");
+  const ext = req.url.split(".")[1];
+  const splitUrl = req.url.split("/");
   const filePath = path.join(__dirname, "..", "..", ...splitUrl);
   fs.readFile(filePath, (err, file) => {
     if (err) {
