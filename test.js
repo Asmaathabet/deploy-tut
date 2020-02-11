@@ -1,4 +1,4 @@
-const handler = require('./server.js').handler;
+const handler = require('./src/server.js').handler;
 const test = require('tape');
 
 const endpoints = [
